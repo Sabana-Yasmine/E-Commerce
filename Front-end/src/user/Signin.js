@@ -15,6 +15,8 @@ function Signin(props) {
         await axios.post("http://localhost:402/user/userlogin",{email,pass})
             .then((res) => {
                 console.log(res)
+                console.log("token", res.data.data.jwttoken);
+                localStorage.setItem("token",res.data.data.jwttoken);
             alert("Successfully login")
               navigate("/product")
             }).catch((error) => {

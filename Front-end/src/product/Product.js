@@ -12,7 +12,7 @@ class Product extends Component {
         this.changeproductName = this.changeproductName.bind(this)
         this.changequantity = this.changequantity.bind(this)
     
-       this.state = {
+       this.setState = {
         getProduct : false,
         getUpdate : "",
         productCategory: "",
